@@ -2,6 +2,8 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import Videoplayer from './Videoplayer';
+import Chatbox from './Chatbox';
 
 function App() {
   const [message, setMessage] = useState("Click the button to Start");
@@ -33,10 +35,12 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    <div>
+    <div style={{ display: "flex", gap: "200px" }}>
       <h1>This the Title card</h1>
-      <p>{message}</p>
-      <button onClick={handleClick}>Click me</button>
+      {/* <p>{message}</p>
+      <button onClick={handleClick}>Click me</button> */}
+      <Videoplayer />
+      <Chatbox />
     </div>
   )
 }
